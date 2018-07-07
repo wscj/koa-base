@@ -1,0 +1,26 @@
+{
+  "name": "koa-base",
+  "version": "1.0.0",
+  "description": "A base project for koa",
+  "main": "index.js",
+  "scripts": {
+    "dev": "supervisor --inspect index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wscj/koa-base.git"
+  },
+  "author": "ChenJing",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wscj/koa-base/issues"
+  },
+  "homepage": "https://github.com/wscj/koa-base#readme",
+  "dependencies": {
+    "koa": "^2.5.1",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
+    "supervisor": "^0.12.0"
+  }
+}
