@@ -7,6 +7,19 @@ const router = require('./router')
 app.use(require('koa-static')(path.join(__dirname, 'static'), {}))
 
 app.use(router.routes()).use(router.allowedMethods())
+const cors = require('koa2-cors')
 
-app.listen(3500)
-console.log('listening on 3500 port')
+// 跨域授权
+app.use(cors({
+  origin: function (ctx) {
+    // 如果不是允许的域名，返回false
+    return ctx.request.req.headers.origin
+  },
+  maxAge: 3600,
+  credentials: true,
+  allowMethods: ['GET', 'POST', 'OPTIONS'],
+  allowHeaders: ['Keep-Alive', 'User-Agent', 'Content-Type', 'Authorization']
+}))
+
+app.listen(4500)
+console.log('listening on 4500 port')
