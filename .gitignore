@@ -16,3 +16,6 @@ test_aocj312s.apk
 *.ntvs*
 *.njsproj
 *.sln
+
+package-lock.json
+yarn.lock
